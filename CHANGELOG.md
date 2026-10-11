@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.0.12 · 2026-10-11
+
+`bto-teardown` được nâng cấp sau một lần teardown thật (firewall outbound trên macOS, bản gốc mã nguồn mở GPL):
+
+- **Thử bức tường thành vòng lặp.** Mỗi lượt dùng một agent mới, chỉ đọc `SPEC.md` trong thư mục tạm. Câu hỏi xếp thành CHẶN hoặc NHỎ; mỗi lượt lưu `SPEC.round<N>.md`; phạm vi nới dần; dừng khi một lượt trả về 0 câu chặn. Có sẵn đoạn lệnh cho agent và nhật ký thật (21 → 7 → 4 → 5 → 2 → 2 → 2 → 0); khi gần xong, mỗi lượt chạy 2 agent độc lập.
+- **Spec có thêm mục Thuật ngữ và mục Câu hỏi mở cho chủ sản phẩm.** Chủ duyệt xong thì mục này đổi thành "Quyết định đã chốt", kèm ngày.
+- **Thư mục đội A nằm ngoài mọi repo sản phẩm**, kèm cảnh báo về license copyleft (GPL/AGPL).
+- **App desktop dùng `system-interfaces.md`** thay cho `api-endpoints.md`. Mỗi file phân tích kết bằng mục "Khoảng trống".
+- **`audit.md` dạng bảng ba cột**, ở lại phía đội A. Spec không nhắc tên bản gốc.
+- **Hướng dẫn cho `V0.1-TASKS.md`** (phần 1 là lõi thuần có giả lập) và cho repo phía đội B (`docs/spec/`, luật sạch phòng trong `CLAUDE.md`).
+- **Thêm checklist tự kiểm trước khi spec qua tường.**
+
 ## 0.0.11 · 2026-10-11
 
 `bto-researchmarket` được nâng cấp sau đợt research thật (một suite tiện ích Mac/Windows, 10/2026):
